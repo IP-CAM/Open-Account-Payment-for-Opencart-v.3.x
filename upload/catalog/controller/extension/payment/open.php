@@ -10,7 +10,7 @@ class ControllerExtensionPaymentOpen extends Controller {
 		if ($this->session->data['payment_method']['code'] == 'open') {
 			$this->load->model('checkout/order');
 
-			$this->model_checkout_order->addOrderHistory($this->session->data['order_id'], $this->config->get('payment_cod_order_status_id'));
+			$this->model_checkout_order->addOrderHistory($this->session->data['order_id'], $this->config->get('payment_open_order_status_id'));
 		
 			$json['redirect'] = $this->url->link('checkout/success');
 		}
