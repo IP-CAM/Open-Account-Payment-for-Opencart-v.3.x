@@ -95,9 +95,9 @@ class ControllerExtensionPaymentOpen extends Controller {
 		$this->db->query('ALTER TABLE `'.DB_PREFIX.'customer` ADD `account_terms` varchar(15)');
 		// now add triggers for admin to edit
 		$this->load->model('setting/event');
-		$this->model_setting_event->addEvent('open','admin/view/customer/customer_form/after','event/open/index');
-		$this->model_setting_event->addEvent('open','admin/model/customer/customer/addCustomer/after','event/open/save');
-		$this->model_setting_event->addEvent('open','admin/model/customer/customer/editCustomer/after','event/open/save');
+		$this->model_setting_event->addEvent('open','admin/view/customer/customer_form/after','extension/event/open/index');
+		$this->model_setting_event->addEvent('open','admin/model/customer/customer/addCustomer/after','extension/event/open/save');
+		$this->model_setting_event->addEvent('open','admin/model/customer/customer/editCustomer/after','extension/event/open/save');
 		
 	}
 

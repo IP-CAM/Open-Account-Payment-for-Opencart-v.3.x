@@ -1,5 +1,5 @@
 <?php
-class ControllerEventOpen extends Controller {
+class controllerExtensionEventOpen extends Controller {
 	
 	public function index(&$view, &$data, &$output) {// triggered after view customer form
 		// build insert html
